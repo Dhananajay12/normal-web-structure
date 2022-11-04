@@ -1,38 +1,392 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.navbars {
+  position: sticky;
+  margin-left: auto;
+  margin-right: auto;
+  margin-left: auto;
+  background-color: white !important;
+  top: 0;
+  z-index: 999;
   display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  box-shadow: var(--box-shadow);
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  padding: 12px 2%;
+  justify-content: space-between;
+  border-radius: 20px;
+  width: 80%;
+  border: 1px solid rgb(230, 230, 230);
+  text-transform: capitalize !important;
 }
 
-.App-link {
-  color: #61dafb;
+.menu {
+  padding: 0;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+dl,
+ol,
+ul {
+  margin-top: 0;
+  margin-bottom: 0rem !important;
+}
+
+.menu>li,
+menu>a {
+  display: inline-block;
+}
+
+.menu li {
+  position: relative;
+}
+
+.menu a {
+  text-decoration: none;
+  display: block;
+  padding: 10px 1.5rem;
+}
+
+ul {
+  list-style: none;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 190px;
+  left: 0;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  transition: all 1s ease-in;
+}
+
+.dropdown-content2 {
+  transition: all 1s ease-in;
+  left: 100.5%;
+  width: 100%;
+  padding: 0;
+  display: none;
+  top: 0;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.dropdown-content li:hover {
+  background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+  transition: .7s linear;
+  /* Animation */
+}
+
+.dropdown2:hover .dropdown-content2 {
+  display: block;
+  transition: .7s linear;
+  /* Animation */
+}
+
+.dropdown-content2 li {
+  color: black;
+
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content li {
+  color: black;
+
+  text-decoration: none;
+  display: block;
+}
+
+.dropbtn {
+
+  border: none;
+}
+
+
+@media(max-width:950px) {
+  .header {
+    position: relative;
+    height: 6rem;
+
   }
+
+  .logo {
+    margin-top: -1rem;
+  }
+
+  .navbars {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 500px;
+    position: absolute;
+    top: 80px;
+    left: -100%;
+    opacity: 1;
+    transition: all 0.5s ease;
+
+
+  }
+
+  .link {
+    color: white !important;
+  }
+
+  .navbar.active {
+    margin-top: 1rem;
+    left: 0;
+
+
+    transition: all 0.5s ease;
+    z-index: 1;
+    background-color: rgb(68, 62, 6);
+
+  }
+
+
+  .link {
+    text-align: center;
+    margin: 1.5rem;
+    width: 90%;
+    display: table;
+  }
+
+  .link :hover {
+    border-radius: 0;
+  }
+
+  .logo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translate(25%, 50%);
+
+  }
+
+  .hamburger-menu {
+    display: block !important;
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translate(-100%, 60%);
+    font-size: 1.8rem;
+    cursor: pointer;
+
+  }
+
+  .icons {
+    border: 1px solid white;
+    margin-top: 0.5rem;
+
+  }
+}
+
+.icons2 {
+  border: 1px solid white;
+  margin-top: 0.5rem;
+  font-size: 40px !important;
+  color: wheat;
+  border-radius: 20px;
+  padding: 1%;
+
+  background-color: #918813;
+
+}
+
+
+.hamburger-menu {
+  display: none;
+
+}
+
+.display {
+  display: none;
+}
+
+/*--  hover-underline-animation end --- */
+
+
+
+
+
+#sky {
+  overflow: hidden !important;
+  background-image: url("/src/Image/banner.jpg");
+  height: 60rem;
+}
+
+#clouds {
+  width: 100%;
+  height: 100px;
+  text-align: center;
+  background-size: cover;
+  -webkit-animation: movingclouds 35s linear infinite;
+  -moz-animation: movingclouds 20s linear infinite;
+  -o-animation: movingclouds 20s linear infinite;
+}
+
+#clouds2 {
+  width: 100%;
+  height: 100px;
+  text-align: center;
+  background-size: cover;
+  -webkit-animation: movingclouds 10s linear infinite;
+  -moz-animation: movingclouds 20s linear infinite;
+  -o-animation: movingclouds 20s linear infinite;
+}
+
+
+
+@keyframes movingclouds {
+  0% {
+    margin-right: 0%;
+  }
+
+  100% {
+    margin-right: -100%;
+  }
+}
+
+
+@keyframes movingclouds {
+  0% {
+    margin-left: 0%;
+  }
+
+  100% {
+    margin-left: -100%;
+  }
+}
+
+.sky1 {
+  position: relative;
+  height: 60rem;
+  width: 100%;
+  background-image: url("/src/Image/banner.jpg");
+  margin: 0 auto;
+  padding-top: 50px;
+}
+
+@keyframes move {
+  from {
+    left: 100%;
+  }
+
   to {
-    transform: rotate(360deg);
+    left: -100%;
+  }
+}
+
+@keyframes backup {
+  from {
+    right: 100%;
+  }
+
+  to {
+    right: -100%;
+  }
+}
+
+.cloud-1 {
+  position: absolute;
+  animation: move 26s infinite;
+  animation-timing-function: linear;
+  animation-delay: -8s;
+}
+
+.cloud-5 {
+  position: absolute;
+  animation: move 26s infinite;
+  animation-timing-function: linear;
+  animation-delay: -8s;
+}
+
+.cloud-4 {
+  position: absolute;
+  animation: move 26s infinite;
+  animation-timing-function: linear;
+  animation-delay: -8s;
+}
+
+.cloud-3 {
+  position: absolute;
+  animation: backup 20s infinite;
+  animation-timing-function: linear;
+  animation-delay: -8s;
+}
+
+.cloud-2 {
+  position: absolute;
+  animation: backup 20s infinite;
+  animation-timing-function: linear;
+}
+
+.cloud-6 {
+  position: absolute;
+  background-repeat: repeat-y;
+  animation: backup1 36s infinite;
+  animation-timing-function: linear;
+  animation-delay: -8s;
+}
+
+.cloud-8 {
+  position: absolute;
+  background-repeat: repeat-y;
+  animation: backup2 16s infinite;
+  animation-timing-function: linear;
+  animation-delay: -1s;
+}
+
+.cloud-10 {
+  position: absolute;
+  background-repeat: repeat-y;
+}
+
+.cloud-9 {
+  position: absolute;
+  background-repeat: repeat-y;
+  animation: backup2 80s infinite;
+  animation-timing-function: linear;
+  animation-delay: -1s;
+}
+
+.cloud-7 {
+  position: absolute;
+  background-repeat: repeat-y;
+  animation: backup2 45s infinite;
+  animation-timing-function: linear;
+  animation-delay: 8s;
+}
+
+@keyframes backup1 {
+  from {
+    right: 100%;
+  }
+
+  to {
+    right: -100%;
+  }
+}
+
+@keyframes backup2 {
+  from {
+    left: 100%;
+  }
+
+  to {
+    left: -100%;
   }
 }
