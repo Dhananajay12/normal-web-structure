@@ -7,7 +7,8 @@
   --dark-bg: rgba(0, 0, 0, .7);
   --light-bg: #eee;
   --border: .1rem solid var(--black);
-  --box-shadow: 1px 1px 10px 2px #ccc;
+  --box-shadow: 1px 5px 10px 5px #ccc;
+  --box-shadow2: 10px 10px 10px 10px #ccc;
   --text-shadow: 0 1.5rem 3rem rgba(0, 0, 0, .3);
 }
 
@@ -187,7 +188,6 @@ li:hover {
   color: wheat;
   border-radius: 20px;
   padding: 1%;
-
   background-color: #918813;
 
 }
@@ -473,32 +473,22 @@ ul {
 
 /* --------home style here=----------- */
 
-
-.card {
-
-  font-size: 25px;
-  cursor: pointer;
-  text-align: center;
-  margin-top: auto;
-  margin-bottom: auto;
-  padding: 106px 0px;
-  box-shadow: var(--box-shadow);
-}
-
-
-.card:hover {
-  background-color: var(--main-color);
-  transition: 1s;
-  color: white;
-}
-
 .button {
   padding: 1%;
   border: none;
   border-radius: 10px;
-  background-color: var(--main-color);
+  background: linear-gradient(to right, #cc66ff 0%, #cc00cc 100%);
+  ;
   color: white;
+  text-decoration: none;
 }
+
+.button:hover {
+  color: #bbbbe6;
+  transition: linear 1s;
+  background: linear-gradient(to right, #cc00cc 0%, #cc66ff 100%);
+}
+
 
 .icons {
   background-color: var(--main-color);
@@ -523,6 +513,13 @@ ul {
   color: var(--main-color);
 }
 
+.color2 {
+  background: #cc66ff;
+  background: linear-gradient(to right, #cc66ff 0%, #CC00CC 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
 
 .padding-1 {
   padding-left: 22%;
@@ -538,6 +535,8 @@ ul {
   width: 100px;
 }
 
+
+/*------big-card-style-start------ */
 .big-card {
   border: 1px solid rgb(192, 191, 191);
   padding: 3%;
@@ -568,7 +567,6 @@ ul {
 }
 
 .radio-button-active {
-
 
   border-radius: 5px;
   padding: 2% 8%;
@@ -606,10 +604,344 @@ ul {
   margin-right: auto;
 }
 
+
 .tran {
   transition: 2s;
 }
 
-.center2 {}
+
+
+
+
+/* Card---small---- */
+
+
+
+.card {
+
+  font-size: 25px;
+  cursor: pointer;
+  text-align: center;
+  margin-top: auto;
+  margin-bottom: auto;
+  padding: 106px 0px;
+  box-shadow: var(--box-shadow);
+}
+
+
+.card:hover {
+  /* background-color: var(--main-color); */
+  transition: 1s;
+  color: white;
+}
+
+
+
+.go-corner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  width: 32px;
+  height: 32px;
+  overflow: hidden;
+  top: 0;
+  right: 0;
+  background-color: var(--main-color);
+  border-radius: 0 4px 0 32px;
+}
+
+.go-arrow {
+  margin-top: -4px;
+  margin-right: -4px;
+  color: white;
+  font-family: courier, sans;
+}
+
+.card-small {
+  display: block;
+  position: relative;
+  background-color: #f2f8f9;
+  border-radius: 4px;
+
+
+  text-decoration: none;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.card-small:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: -16px;
+  right: -16px;
+  background: var(--main-color);
+  height: 32px;
+  width: 45px;
+  border-radius: 32px;
+  transform: scale(1);
+  transform-origin: 50% 50%;
+  transition: transform 0.25s ease-out;
+}
+
+
+.card-small:hover:before {
+  transform: scale(21);
+}
+
+.card-small p :hover {
+
+  transition: all 0.3s ease-out;
+  color: rgba(255, 255, 255, 0.8);
+
+
+
+}
+
+.card-small h3 :hover {
+
+  transition: all 0.3s ease-out;
+  color: #ffffff;
+
+}
+
+
+
+
+.container .box {
+  position: relative;
+  width: 25rem;
+  height: 30rem;
+  cursor: pointer;
+
+}
+
+.container .box:hover .imgBox {
+  transform: translate(-3.5rem, -3.5rem);
+}
+
+.container .box:hover .content {
+  transform: translate(3.5rem, 3.5rem);
+}
+
+.imgBox {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  transition: all 0.5s ease-in-out;
+}
+
+.imgBox img {
+  width: 25rem;
+  height: 30rem;
+  object-fit: cover;
+  resize: both;
+  border-radius: 10px;
+}
+
+.content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 1.5rem;
+  display: flex;
+  box-shadow: var(--box-shadow2);
+  justify-content: center;
+  background-color: #fff;
+  z-index: 1;
+  align-items: flex-end;
+  text-align: center;
+  transition: 0.5s ease-in-out;
+}
+
+.content h2 {
+  display: block;
+  font-size: 1.5rem;
+  color: #111;
+  font-weight: 500;
+  line-height: 2rem;
+  letter-spacing: 1px;
+}
+
+.content span {
+  color: #555;
+  font-size: 1.2rem;
+  font-weight: 300;
+  letter-spacing: 2px;
+  margin-left: 2rem;
+}
+
+@media (max-width: 600px) {
+  .container .box:hover .content {
+    transform: translate(0, 3.5rem);
+  }
+
+  .container .box:hover .imgBox {
+    transform: translate(0, -3.5rem);
+  }
+}
+
+.shadow {
+  box-shadow: var(--box-shadow2);
+}
+
+/*------ card-style-end------ */
 
 /* --------home style end=----------- */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* contact us------ */
+
+.icon-social {
+  text-align: center;
+
+}
+
+.register-free {
+  text-align: center;
+  width: 100%;
+
+}
+
+.zoom {
+
+  transition: transform .2s;
+  /* Animation */
+  margin: 0 auto;
+
+}
+
+.zoom:hover {
+  transform: scale(1.1);
+
+
+  cursor: pointer;
+
+}
+
+.marginFooter {
+  margin-top: 0.7rem;
+}
+
+.icons {
+  color: white !important;
+  border: 1px solid white;
+  padding: 11px;
+  font-size: 50px;
+  border-radius: 40px;
+  margin: 5px !important;
+}
+
+.color-hr {
+  color: white;
+}
+
+.contactus-section {
+  margin: -4rem 0;
+}
+
+.contact-leftside img {
+  min-width: 80%;
+  max-height: 30rem;
+  height: auto;
+}
+
+.contact-input-feild {
+  margin-bottom: 4rem;
+}
+
+.contact-rightside form .form-control {
+
+  --webkit-appearance: none;
+  height: 3rem !important;
+  box-shadow: 0 5px 38px rgba(0, 0, 0, 0.30), 0 8px 12px rgba(0, 0, 0, 0.22);
+  font-size: 1.2rem;
+  padding-left: 1rem;
+  font-weight: lighter;
+  outline: 0;
+
+}
+
+.contact {
+  padding: 2%;
+  border-radius: 20px;
+
+}
+
+.contact-rightside form .form-check-input {
+  border: 1px solid rgb(11 60 82);
+  width: 2rem;
+  height: 2rem;
+
+}
+
+.form-checkbox-style {
+  margin: 4rem 0;
+}
+
+.contact-rightside form .main-hero-para {
+  font-size: 1.5rem;
+  color: var(--text-color);
+  font-weight: 400;
+  margin: -2px;
+
+  width: 92%;
+  padding: 0 2rem;
+
+}
+
+
+
+.border-red {
+  border-radius: 0px 0px 8px 8px;
+}
+
+
+/* contact us end----- */
+
+
+
+
+
+
+
+
+/* =--------Business setup guide start-------- */
+
+.color4 {
+  background: linear-gradient(to right, #0033cc 11%, #ff6699 91%);
+}
+
+
+.padding {
+  padding: 2%;
+}
+
+.white-button {
+  border: none;
+  padding: 1%;
+  border-radius: 10px;
+}
+
+
+
+/* =--------Business setup guide end-------- */
