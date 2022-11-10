@@ -1,24 +1,32 @@
 import { useEffect, useState } from "react";
 import "./App.css";
 import logo from "./Image/logo.png";
+import logo2 from "./Image/logo-small.png";
 import banner from "./Image/banner.jpg";
 import cl from "./Image/cl-1.png";
 import longcloud from "./Image/LOWER-CLOUD.png";
 
 import { GiHamburgerMenu } from "react-icons/gi";
-import { AiOutlineClose } from "react-icons/ai";
+import {
+  AiOutlineArrowDown,
+  AiOutlineArrowUp,
+  AiOutlineClose,
+} from "react-icons/ai";
 import { MdArrowDropDown } from "react-icons/md";
 import { RiArrowDropRightFill } from "react-icons/ri";
+import { CgArrowLeftO } from "react-icons/cg";
+import { AiFillCheckCircle } from "react-icons/ai";
 
 function App() {
   const [showMediaIcons, setShowMediaIcons] = useState(false);
   const [showComponent, setshowComponent] = useState("start");
 
   const [color, setColor] = useState(false);
-
-  useEffect(() => {
-    setshowComponent("start");
-  }, []);
+  const [show, setShow] = useState(false);
+  const [visa, setVisa] = useState(false);
+  // useEffect(() => {
+  //   setshowComponent("start");
+  // }, []);
 
   const changeColor = () => {
     if (window.scrollY >= 50) {
@@ -132,101 +140,6 @@ function App() {
           </button>
         </div>
       </section>
-      {/* <nav className={showMediaIcons ? "navbars active" : "navbars"}>
-        <a href="/" className="">
-          <img src={logo} alt="error" className="logo" />
-        </a>
-        <ul className="menu">
-          <li>
-            <div className="dropdown">
-              <a href="/" className="dropbtn">
-                Business-Guide <MdArrowDropDown />
-              </a>
-              <div className="dropdown-content">
-                <li>
-                  <a href="/">Where</a>{" "}
-                </li>
-                <li>
-                  <a href="/">How</a>{" "}
-                </li>
-                <li>
-                  <a href="/">May</a>{" "}
-                </li>
-              </div>
-            </div>
-          </li>
-
-          <li>
-            <div className="dropdown">
-              <a href="/" className="dropbtn">
-                Licensing <MdArrowDropDown />
-              </a>
-              <div className="dropdown-content">
-                <li className="dropdown2">
-                  <a href="/" className="d-flex">
-                    Mainland License{" "}
-                    <RiArrowDropRightFill fontSize="20px" className="mt-1 " />{" "}
-                  </a>
-                  <ul className="dropdown-content2">
-                    <li>
-                      <a href="/">Professional</a>{" "}
-                    </li>
-                    <li>
-                      <a href="/">Commercial License</a>{" "}
-                    </li>
-                    <li>
-                      <a href="/">Industrial License</a>{" "}
-                    </li>
-                    <li>
-                      <a href="/">Tourism License</a>{" "}
-                    </li>
-                    <li>
-                      <a href="/">E Trader Lincense</a>{" "}
-                    </li>
-                  </ul>
-                </li>
-                <li>
-                  <a href="/">Free zone License</a>{" "}
-                </li>
-                <li>
-                  <a href="/">Offshore License</a>{" "}
-                </li>
-              </div>
-            </div>
-          </li>
-          <li>
-            <div className="dropdown">
-              <a href="/" className="dropbtn">
-                Visa <MdArrowDropDown />
-              </a>
-              <div className="dropdown-content">
-                <li>
-                  <a href="/">Dubai-Business visa</a>{" "}
-                </li>
-                <li>
-                  <a href="/">Dubai-Investi visa</a>{" "}
-                </li>
-              </div>
-            </div>
-          </li>
-          <li>
-            <a href="/">About US </a>{" "}
-          </li>
-          <li>
-            <a href="/">Blog </a>{" "}
-          </li>
-        </ul>
-        <button
-          className="display  mx-3"
-          onClick={() => setShowMediaIcons(false)}
-        />
-      </nav>
-      <div className="hamburger-menu mt-1">
-        <a href="/" onClick={() => setShowMediaIcons(!showMediaIcons)}>
-          <button className="icons" />
-        </a>
-      </div> */}
-
       <div>
         <div className="sky1 img-fluid">
           <img height="50px" className="cloud-1" src={cl} alt="error"></img>
@@ -255,200 +168,538 @@ function App() {
       <br></br>
       <br></br>
       <br></br>
-      <br></br>
-      <br></br>
-      <br></br>
-      <div>
-        <h1>heyy</h1>
+      <div className="center">
+        <p className="color h1 bold-text">Business Set Up Services</p>
+        <p className="padding-1 mt-4">
+          Are you looking to set up a business in Dubai? Starting a business in
+          Dubai is easy with help from the right professionals. Kiltons offers
+          the best and economical business setup services
+        </p>
+        <p className="bold-text h4 mt-4 text-secondary">
+          Choose your business need in Dubai or UAE to continue
+        </p>
       </div>
+      <br />
+      <br />
+      <br />
       <div>
         {showComponent === "start" && (
           <>
-            <div onClick={() => setshowComponent("add-trip")} className="">
-              <h1>John Doe</h1>
-              <p>
-                Some example text some example text. John Doe is an architect
-                and engineer
-              </p>
-            </div>
-            <div onClick={() => setshowComponent("third")} className="">
-              <h1>John Doe2</h1>
-              <p>
-                22 Some example text some example text. John Doe is an architect
-                and engineer2
-              </p>
+            <div className="container">
+              <div className="row">
+                <div className="col-md-4 mt-2">
+                  <div
+                    onClick={() => setshowComponent("add-trip")}
+                    className="card color"
+                  >
+                    <p>I WANT TO START A COMPANY</p>
+                  </div>
+                </div>
+                <div className="col-md-4 mt-2">
+                  <div
+                    onClick={() => setshowComponent("company")}
+                    className="card color"
+                  >
+                    <p>I ALREADY HAVE A COMPANY</p>
+                  </div>
+                </div>
+                <div className="col-md-4 mt-2">
+                  <div
+                    onClick={() => setshowComponent("third")}
+                    className="card color"
+                  >
+                    <p>TALK TO OUR EXPERT</p>
+                  </div>
+                </div>
+              </div>
             </div>
           </>
         )}
-
         {showComponent === "add-trip" && (
-          <div onClick={() => setshowComponent("third")} className="fade">
-            {" "}
-            <h1>John Doe3</h1>
-            <p>
-              Some example text some example text. John Doe is an architect and
-              engineer3
-            </p>
+          <div className="container">
+            <div className="div-icons">
+              <CgArrowLeftO
+                className="icons "
+                onClick={() => setshowComponent("start")}
+              />
+            </div>
+            <div className="row">
+              <div className="col-md-6 col-lg-4">
+                <div
+                  onClick={() => setshowComponent("third")}
+                  className="card color"
+                >
+                  {" "}
+                  <p>MAINLAND</p>
+                </div>
+              </div>
+              <div className="col-md-6 col-lg-4">
+                <div
+                  onClick={() => setshowComponent("third")}
+                  className="card color"
+                >
+                  {" "}
+                  <p>FREEZONE</p>
+                </div>
+              </div>
+              <div className="col-md-6 col-lg-4">
+                <div
+                  onClick={() => setshowComponent("third")}
+                  className="card color"
+                >
+                  {" "}
+                  <p>OFFSHORE</p>
+                </div>
+              </div>
+            </div>
+            <br></br>
+            <div className="row">
+              <center>
+                <div className="col-md-6 col-lg-4">
+                  <div
+                    onClick={() => setshowComponent("third")}
+                    className="card color"
+                  >
+                    {" "}
+                    <p>TALK TO OUR EXPERT</p>
+                  </div>
+                </div>
+              </center>
+            </div>
+          </div>
+        )}
+        {showComponent === "company" && (
+          <div className="container">
+            <div className="row">
+              <div className="col-md-6 col-lg-4">
+                <div
+                  onClick={() => setshowComponent("third")}
+                  className="card color"
+                >
+                  {" "}
+                  <p>I WANT TO RENEW MY LICENSE</p>
+                </div>
+              </div>
+              <div className="col-md-6 col-lg-4">
+                <div
+                  onClick={() => setshowComponent("third")}
+                  className="card color"
+                >
+                  {" "}
+                  <p>I NEED TO MAKE CHANGES IN MY LICENSE</p>
+                </div>
+              </div>
+              <div className="col-md-6 col-lg-4">
+                <div
+                  onClick={() => setshowComponent("third")}
+                  className="card color"
+                >
+                  {" "}
+                  <p>I WNAT TO SELL MY LICENSE</p>
+                </div>
+              </div>
+            </div>
+            <br></br>
+            <center>
+              <button
+                className="button"
+                onClick={() => setshowComponent("start")}
+              >
+                BACK TO HOME
+              </button>
+            </center>
+            <br></br>
           </div>
         )}
         {showComponent === "third" && (
-          <div onClick={() => setshowComponent("start")} className="fade">
-            {" "}
-            <h1>John Doe4</h1>
-            <p>
-              Some example text some example text. John Doe is an architect and
-              engineer4
-            </p>
+          <div className="container">
+            <div className="row">
+              <div className="div-icons">
+                <CgArrowLeftO
+                  className="icons"
+                  onClick={() => setshowComponent("start")}
+                />
+              </div>
+              <center>
+                <div className="col-md-3">
+                  <div
+                    onClick={() => setshowComponent("start")}
+                    className="card color"
+                  >
+                    {" "}
+                    <p>GET EXPERTS ADVICE NOW</p>
+                  </div>
+                </div>
+                <br></br>
+                <button
+                  className="button"
+                  onClick={() => setshowComponent("start")}
+                >
+                  BACK TO HOME
+                </button>
+              </center>
+            </div>
           </div>
         )}
       </div>
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
 
-      {/* <div className="mt-5">
-        <p>
-          orem Ipsum is simply dummy text of the printing and typesetting
-          industry. Lorem Ipsum has been the industry's standard dummy text ever
-          since the 1500s, when an unknown printer took a galley of type and
-          scrambled it to make a type specimen book. It has survived not only
-          five centuries, but also the leap into electronic typesetting,
-          remaining essentially unchanged. It was popularised in the 1960s with
-          the release of Letraset sheets containing Lorem Ipsum passages, and
-          more recently with desktop publishing software like Aldus PageMaker
-          including versions of Lorem Ipsum. Why do we use it? It is a long
-          established fact that a reader will be distracted by the readable
-          content of a page when looking at its layout. The point of using Lorem
-          Ipsum is that it has a more-or-less normal distribution of letters, as
-          opposed to using 'Content here, content here', making it look like
-          readable English. Many desktop publishing packages and web page
-          editors now use Lorem Ipsum as their default model text, and a search
-          for 'lorem ipsum' will uncover many web sites still in their infancy.
-          Various versions have evolved over the years, sometimes by accident,
-          sometimes on purpose (injected humour and the like). orem Ipsum is
-          simply dummy text of the printing and typesetting industry. Lorem
-          Ipsum has been the industry's standard dummy text ever since the
-          1500s, when an unknown printer took a galley of type and scrambled it
-          to make a type specimen book. It has survived not only five centuries,
-          but also the leap into electronic typesetting, remaining essentially
-          unchanged. It was popularised in the 1960s with the release of
-          Letraset sheets containing Lorem Ipsum passages, and more recently
-          with desktop publishing software like Aldus PageMaker including
-          versions of Lorem Ipsum. Why do we use it? It is a long established
-          fact that a reader will be distracted by the readable content of a
-          page when looking at its layout. The point of using Lorem Ipsum is
-          that it has a more-or-less normal distribution of letters, as opposed
-          to using 'Content here, content here', making it look like readable
-          English. Many desktop publishing packages and web page editors now use
-          Lorem Ipsum as their default model text, and a search for 'lorem
-          ipsum' will uncover many web sites still in their infancy. Various
-          versions have evolved over the years, sometimes by accident, sometimes
-          on purpose (injected humour and the like). orem Ipsum is simply dummy
-          text of the printing and typesetting industry. Lorem Ipsum has been
-          the industry's standard dummy text ever since the 1500s, when an
-          unknown printer took a galley of type and scrambled it to make a type
-          specimen book. It has survived not only five centuries, but also the
-          leap into electronic typesetting, remaining essentially unchanged. It
-          was popularised in the 1960s with the release of Letraset sheets
-          containing Lorem Ipsum passages, and more recently with desktop
-          publishing software like Aldus PageMaker including versions of Lorem
-          Ipsum. Why do we use it? It is a long established fact that a reader
-          orem Ipsum is simply dummy text of the printing and typesetting
-          industry. Lorem Ipsum has been the industry's standard dummy text ever
-          since the 1500s, when an unknown printer took a galley of type and
-          scrambled it to make a type specimen book. It has survived not only
-          five centuries, but also the leap into electronic typesetting,
-          remaining essentially unchanged. It was popularised in the 1960s with
-          the release of Letraset sheets containing Lorem Ipsum passages, and
-          more recently with desktop publishing software like Aldus PageMaker
-          including versions of Lorem Ipsum. Why do we use it? It is a long
-          established fact that a reader will be distracted by the readable
-          content of a page when looking at its layout. The point of using Lorem
-          Ipsum is that it has a more-or-less normal distribution of letters, as
-          opposed to using 'Content here, content here', making it look like
-          readable English. Many desktop publishing packages and web page
-          editors now use Lorem Ipsum as their default model text, and a search
-          for 'lorem ipsum' will uncover many web sites still in their infancy.
-          Various versions have evolved over the years, sometimes by accident,
-          sometimes on purpose (injected humour and the like). will be orem
-          Ipsum is simply dummy text of the printing and typesetting industry.
-          Lorem Ipsum has been the industry's standard dummy text ever since the
-          1500s, when an unknown printer took a galley of type and scrambled it
-          to make a type specimen book. It has survived not only five centuries,
-          orem Ipsum is simply dummy text of the printing and typesetting
-          industry. Lorem Ipsum has been the industry's standard dummy text ever
-          since the 1500s, when an unknown printer took a galley of type and
-          scrambled it to make a type specimen book. It has survived not only
-          five centuries, but also the leap into electronic typesetting,
-          remaining essentially unchanged. It was popularised in the 1960s with
-          the release of Letraset sheets containing Lorem Ipsum passages, and
-          more recently with desktop publishing software like Aldus PageMaker
-          including versions of Lorem Ipsum. Why do we use it? It is a long
-          established fact that a reader will be distracted by the readable
-          content of a page when looking at its layout. The point of using Lorem
-          Ipsum is that it has a more-or-less normal distribution of letters, as
-          opposed to using 'Content here, content here', making it look like
-          readable English. Many desktop publishing packages and web page
-          editors now use Lorem Ipsum as their default model text, and a search
-          for 'lorem ipsum' will uncover many web sites still in their infancy.
-          Various versions have evolved over the years, sometimes by accident,
-          sometimes on purpose (injected humour and the like). but also the leap
-          into electronic typesetting, remaining essentially unchanged. It was
-          popularised in the 1960s with the release of Letraset sheets
-          containing Lorem Ipsum passages, and more recently with desktop
-          publishing software like Aldus PageMaker including versions of Lorem
-          Ipsum. Why do we use it? It is a long established fact that a reader
-          will be distracted by the readable content of a page when looking at
-          its layout. The point of using Lorem Ipsum is that it has a
-          more-or-less normal distribution of letters, as opposed to using
-          'Content here, content here', making it look like readable English.
-          Many desktop publishing packages and web page editors now use Lorem
-          Ipsum as their default model text, and a search for 'lorem ipsum' will
-          uncover many web sites still in their infancy. Various versions have
-          evolved over the years, sometimes by accident, sometimes on purpose
-          (injected humour and the like). orem Ipsum is simply dummy text of the
-          printing and typesetting industry. Lorem Ipsum has been the industry's
-          standard dummy text ever since the 1500s, when an unknown printer took
-          a galley of type and scrambled it to make a type specimen book. It has
-          survived not only five centuries, but also the leap into electronic
-          typesetting, remaining essentially unchanged. It was popularised in
-          the 1960s with the release of Letraset sheets containing Lorem Ipsum
-          passages, and more recently with desktop publishing software like
-          Aldus PageMaker including versions of Lorem Ipsum. Why do we use it?
-          It is a long established fact that a reader will be distracted by the
-          readable content of a page when looking at its layout. The point of
-          using Lorem Ipsum is that it has a more-or-less normal distribution of
-          letters, as opposed to using 'Content here, content here', making it
-          look like readable English. Many desktop publishing packages and web
-          page editors now use Lorem Ipsum as their default model text, and a
-          search for 'lorem ipsum' will uncover many web sites still in their
-          infancy. Various versions have evolved over the years, sometimes by
-          accident, sometimes on purpose (injected humour and the like).
-          distracted by the readable content of a page when looking at its
-          layout. The point of using Lorem Ipsum is that it has a more-or-less
-          normal distribution of letters, as opposed to using 'Content here,
-          content here', making it look like readable English. Many desktop
-          publishing packages and web page editors now use Lorem Ipsum as their
-          default model text, and a search for 'lorem ipsum' will uncover many
-          web sites still in their infancy. Various versions have evolved over
-          the years, sometimes by accident, sometimes on purpose (injected
-          humour and the like). orem Ipsum is simply dummy text of the printing
-          and typesetting industry. Lorem Ipsum has been the industry's standard
-          dummy text ever since the 1500s, when an unknown printer took a galley
-          of type and scrambled it to make a type specimen book. It has survived
-          not only five centuries, but also the leap into electronic
-          typesetting, remaining essentially unchanged. It was popularised in
-          the 1960s with the release of Letraset sheets containing Lorem Ipsum
-          passages, and more recently with desktop publishing software like
-          Aldus PageMaker including versions of Lorem Ipsum. Why do we use it?
-          It is a long established fact that a reader will be distracted by the
-          readable content of a page when looking at its layout. The point of
-          using Lorem Ipsum is that it has a more-or-less normal distribution of
-          letters, as opposed to using 'Content here, content here', making it
-          look like readable English. Many desktop publishing packages and web
-          page editors now use Lorem Ipsum as their default model text, and a
-          search for 'lorem ipsum' will uncover many web sites still in their
-          infancy. Various versions have evolved over the years, sometimes by
-          accident, sometimes on purpose (injected humour and the like).
-        </p>
-      </div> */}
+      <div className="container">
+        <div className="row">
+          <div className="col-lg-4 col-md-6">
+            <div className={visa ? "big-card  " : "big-card-active "}>
+              <div className="d-flex space">
+                <h2 className="mt-2">Shams freezone</h2>
+                <img src={logo2} className="small-logo" />
+              </div>
+
+              <p onClick={() => setShow(!show)} style={{ cursor: "pointer" }}>
+                View Detail{" "}
+                {show ? <AiOutlineArrowDown /> : <AiOutlineArrowUp />}
+              </p>
+              <div style={{ display: show ? "" : "none" }} className="tran">
+                Sharjah Media City (Shams) - A perfect Free Zone for your
+                Business Setup in Sharjah, UAE. 100% foreign ownership
+                permitted!
+              </div>
+              <hr></hr>
+              <div className="d-flex margin ">
+                <div
+                  className={visa ? "radio-button " : " radio-button-active"}
+                  onClick={() => setVisa(true)}
+                >
+                  <input
+                    type="radio"
+                    id="age1"
+                    name="age"
+                    value="30"
+                    style={{ cursor: "pointer" }}
+                  />
+                  <label for="age1" className="mx-1">
+                    Without Visa
+                  </label>
+                </div>
+                <div
+                  className={visa ? "radio-button-active " : "radio-button"}
+                  onClick={() => setVisa(false)}
+                >
+                  <input
+                    type="radio"
+                    id="age1"
+                    name="age"
+                    value="30"
+                    style={{ cursor: "pointer" }}
+                  />
+                  <label for="age1" className="mx-1">
+                    With Visa
+                  </label>
+                </div>
+              </div>
+              {visa ? (
+                <div className="d-flex space  margin mt-2">
+                  <p className="mt-2 h5">
+                    <s style={{ color: "red" }}>
+                      <span className="text-dark">AED 5750 </span>
+                    </s>{" "}
+                  </p>
+                  <button className="button2">AED 5650</button>
+                </div>
+              ) : (
+                <div className="d-flex space  margin mt-2">
+                  <p className="mt-2 h5">
+                    <s style={{ color: "red" }}>
+                      <span className={visa ? "text-dark" : "text-white"}>
+                        AED 16,190{" "}
+                      </span>
+                    </s>{" "}
+                  </p>
+                  <button className="button-active">AED 16,190</button>
+                </div>
+              )}
+
+              <hr></hr>
+              <ul style={{ padding: "0px" }}>
+                <li className="d-flex">
+                  <AiFillCheckCircle
+                    color="green"
+                    className="mx-2"
+                    fontSize="22px"
+                  />
+                  <p>100% Ownership</p>
+                </li>
+                <li className="d-flex">
+                  {" "}
+                  <AiFillCheckCircle
+                    color="green"
+                    className="mx-2"
+                    fontSize="22px"
+                  />
+                  <p>0% Coroprate Or Personal Tax </p>
+                </li>
+                <li className="d-flex">
+                  {" "}
+                  <AiFillCheckCircle
+                    color="green"
+                    className="mx-2"
+                    fontSize="22px"
+                  />
+                  <p>Multiple Shareholders</p>
+                </li>
+
+                <li className="d-flex">
+                  <AiFillCheckCircle
+                    color="green"
+                    className="mx-2"
+                    fontSize="22px"
+                  />
+                  <p>Companies Will Be Limited Liability</p>
+                </li>
+              </ul>
+              <br></br>
+              <div className="center">
+                <button className="button3">Button {"->"}</button>
+              </div>
+            </div>
+          </div>
+          <div className="col-lg-4 col-md-6">
+            <div className={visa ? "big-card  " : "big-card-active "}>
+              <div className="d-flex space">
+                <h2 className="mt-2">Shams freezone</h2>
+                <img src={logo2} className="small-logo" />
+              </div>
+
+              <p onClick={() => setShow(!show)} style={{ cursor: "pointer" }}>
+                View Detail{" "}
+                {show ? <AiOutlineArrowDown /> : <AiOutlineArrowUp />}
+              </p>
+              <div style={{ display: show ? "" : "none" }} className="tran">
+                Sharjah Media City (Shams) - A perfect Free Zone for your
+                Business Setup in Sharjah, UAE. 100% foreign ownership
+                permitted!
+              </div>
+              <hr></hr>
+              <div className="d-flex margin ">
+                <div
+                  className={visa ? "radio-button " : " radio-button-active"}
+                  onClick={() => setVisa(true)}
+                >
+                  <input
+                    type="radio"
+                    id="age1"
+                    name="age"
+                    value="30"
+                    style={{ cursor: "pointer" }}
+                  />
+                  <label for="age1" className="mx-1">
+                    Without Visa
+                  </label>
+                </div>
+                <div
+                  className={visa ? "radio-button-active " : "radio-button"}
+                  onClick={() => setVisa(false)}
+                >
+                  <input
+                    type="radio"
+                    id="age1"
+                    name="age"
+                    value="30"
+                    style={{ cursor: "pointer" }}
+                  />
+                  <label for="age1" className="mx-1">
+                    With Visa
+                  </label>
+                </div>
+              </div>
+              {visa ? (
+                <div className="d-flex space  margin mt-2">
+                  <p className="mt-2 h5">
+                    <s style={{ color: "red" }}>
+                      <span className="text-dark">AED 5750 </span>
+                    </s>{" "}
+                  </p>
+                  <button className="button2">AED 5650</button>
+                </div>
+              ) : (
+                <div className="d-flex space  margin mt-2">
+                  <p className="mt-2 h5">
+                    <s style={{ color: "red" }}>
+                      <span className={visa ? "text-dark" : "text-white"}>
+                        AED 16,190{" "}
+                      </span>
+                    </s>{" "}
+                  </p>
+                  <button className="button-active">AED 16,190</button>
+                </div>
+              )}
+
+              <hr></hr>
+              <ul style={{ padding: "0px" }}>
+                <li className="d-flex">
+                  <AiFillCheckCircle
+                    color="green"
+                    className="mx-2"
+                    fontSize="22px"
+                  />
+                  <p>100% Ownership</p>
+                </li>
+                <li className="d-flex">
+                  {" "}
+                  <AiFillCheckCircle
+                    color="green"
+                    className="mx-2"
+                    fontSize="22px"
+                  />
+                  <p>0% Coroprate Or Personal Tax </p>
+                </li>
+                <li className="d-flex">
+                  {" "}
+                  <AiFillCheckCircle
+                    color="green"
+                    className="mx-2"
+                    fontSize="22px"
+                  />
+                  <p>Multiple Shareholders</p>
+                </li>
+
+                <li className="d-flex">
+                  <AiFillCheckCircle
+                    color="green"
+                    className="mx-2"
+                    fontSize="22px"
+                  />
+                  <p>Companies Will Be Limited Liability</p>
+                </li>
+              </ul>
+              <br></br>
+              <div className="center">
+                <button className="button3">Button {"->"}</button>
+              </div>
+            </div>
+          </div>
+          <div className="col-lg-4 col-md-6">
+            <div className={visa ? "big-card  " : "big-card-active "}>
+              <div className="d-flex space">
+                <h2 className="mt-2">Shams freezone</h2>
+                <img src={logo2} className="small-logo" />
+              </div>
+
+              <p onClick={() => setShow(!show)} style={{ cursor: "pointer" }}>
+                View Detail{" "}
+                {show ? <AiOutlineArrowDown /> : <AiOutlineArrowUp />}
+              </p>
+              <div style={{ display: show ? "" : "none" }} className="tran">
+                Sharjah Media City (Shams) - A perfect Free Zone for your
+                Business Setup in Sharjah, UAE. 100% foreign ownership
+                permitted!
+              </div>
+              <hr></hr>
+              <div className="d-flex margin ">
+                <div
+                  className={visa ? "radio-button " : " radio-button-active"}
+                  onClick={() => setVisa(true)}
+                >
+                  <input
+                    type="radio"
+                    id="age1"
+                    name="age"
+                    value="30"
+                    style={{ cursor: "pointer" }}
+                  />
+                  <label for="age1" className="mx-1">
+                    Without Visa
+                  </label>
+                </div>
+                <div
+                  className={visa ? "radio-button-active " : "radio-button"}
+                  onClick={() => setVisa(false)}
+                >
+                  <input
+                    type="radio"
+                    id="age1"
+                    name="age"
+                    value="30"
+                    style={{ cursor: "pointer" }}
+                  />
+                  <label for="age1" className="mx-1">
+                    With Visa
+                  </label>
+                </div>
+              </div>
+              {visa ? (
+                <div className="d-flex space  margin mt-2">
+                  <p className="mt-2 h5">
+                    <s style={{ color: "red" }}>
+                      <span className="text-dark">AED 5750 </span>
+                    </s>{" "}
+                  </p>
+                  <button className="button2">AED 5650</button>
+                </div>
+              ) : (
+                <div className="d-flex space  margin mt-2">
+                  <p className="mt-2 h5">
+                    <s style={{ color: "red" }}>
+                      <span className={visa ? "text-dark" : "text-white"}>
+                        AED 16,190{" "}
+                      </span>
+                    </s>{" "}
+                  </p>
+                  <button className="button-active">AED 16,190</button>
+                </div>
+              )}
+
+              <hr></hr>
+              <ul style={{ padding: "0px" }}>
+                <li className="d-flex">
+                  <AiFillCheckCircle
+                    color="green"
+                    className="mx-2"
+                    fontSize="22px"
+                  />
+                  <p>100% Ownership</p>
+                </li>
+                <li className="d-flex">
+                  {" "}
+                  <AiFillCheckCircle
+                    color="green"
+                    className="mx-2"
+                    fontSize="22px"
+                  />
+                  <p>0% Coroprate Or Personal Tax </p>
+                </li>
+                <li className="d-flex">
+                  {" "}
+                  <AiFillCheckCircle
+                    color="green"
+                    className="mx-2"
+                    fontSize="22px"
+                  />
+                  <p>Multiple Shareholders</p>
+                </li>
+
+                <li className="d-flex">
+                  <AiFillCheckCircle
+                    color="green"
+                    className="mx-2"
+                    fontSize="22px"
+                  />
+                  <p>Companies Will Be Limited Liability</p>
+                </li>
+              </ul>
+              <br></br>
+              <div className="center">
+                <button className="button3">Button {"->"}</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
     </>
   );
 }

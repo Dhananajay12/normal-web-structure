@@ -1,5 +1,5 @@
 :root {
-  --main-color: #8e44ad;
+  --main-color: #8D3DAF;
   --black: #222;
   --white: #fff;
   --light-black: #777;
@@ -7,9 +7,13 @@
   --dark-bg: rgba(0, 0, 0, .7);
   --light-bg: #eee;
   --border: .1rem solid var(--black);
-  --box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
+  --box-shadow: 1px 1px 10px 2px #ccc;
   --text-shadow: 0 1.5rem 3rem rgba(0, 0, 0, .3);
 }
+
+
+
+/* -----------Navbar style start-------- */
 
 .header {
   position: sticky;
@@ -27,7 +31,7 @@
   margin-right: auto;
   border: 1px solid rgb(218, 218, 218);
   align-items: center;
-  box-shadow: var(--box-shadow);
+
   /* padding-top: 1rem;
   padding-bottom: 1rem; */
   justify-content: space-between;
@@ -221,8 +225,13 @@ menu>a {
 
 .menu a {
   text-decoration: none;
+  color: #121212;
   display: block;
   padding: 10px 1.5rem;
+}
+
+.menu a:hover {
+  color: var(--main-color);
 }
 
 ul {
@@ -295,35 +304,11 @@ ul {
   border: none;
 }
 
+/* -----------Navbar style end-------- */
 
 
 
-#sky {
-  overflow: hidden !important;
-  background-image: url("/src/Image/banner.jpg");
-  height: 60rem;
-}
-
-#clouds {
-  width: 100%;
-  height: 100px;
-  text-align: center;
-  background-size: cover;
-  -webkit-animation: movingclouds 35s linear infinite;
-  -moz-animation: movingclouds 20s linear infinite;
-  -o-animation: movingclouds 20s linear infinite;
-}
-
-#clouds2 {
-  width: 100%;
-  height: 100px;
-  text-align: center;
-  background-size: cover;
-  -webkit-animation: movingclouds 10s linear infinite;
-  -moz-animation: movingclouds 20s linear infinite;
-  -o-animation: movingclouds 20s linear infinite;
-}
-
+/* -----------caursal style start-------- */
 
 
 @keyframes movingclouds {
@@ -365,7 +350,7 @@ ul {
   position: relative;
   height: 60rem;
   width: 100%;
-  background-image: url("/src/Image/banner.jpg");
+  background-image: url("/src/Image/banner.png");
   margin: 0 auto;
   padding-top: 50px;
 }
@@ -480,3 +465,151 @@ ul {
     left: -100%;
   }
 }
+
+
+
+/* -----------caursal style end-------- */
+
+
+/* --------home style here=----------- */
+
+
+.card {
+
+  font-size: 25px;
+  cursor: pointer;
+  text-align: center;
+  margin-top: auto;
+  margin-bottom: auto;
+  padding: 106px 0px;
+  box-shadow: var(--box-shadow);
+}
+
+
+.card:hover {
+  background-color: var(--main-color);
+  transition: 1s;
+  color: white;
+}
+
+.button {
+  padding: 1%;
+  border: none;
+  border-radius: 10px;
+  background-color: var(--main-color);
+  color: white;
+}
+
+.icons {
+  background-color: var(--main-color);
+  font-size: 50px;
+  color: white;
+  border-radius: 10px;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.div-icons {
+  width: 5rem;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.center {
+  text-align: center;
+}
+
+.color {
+  color: var(--main-color);
+}
+
+
+.padding-1 {
+  padding-left: 22%;
+  padding-right: 22%;
+}
+
+.bold-text {
+  font-weight: bold;
+
+}
+
+.small-logo {
+  width: 100px;
+}
+
+.big-card {
+  border: 1px solid rgb(192, 191, 191);
+  padding: 3%;
+  border-radius: 20px;
+  box-shadow: var(--box-shadow);
+}
+
+.big-card-active {
+  border: 1px solid rgb(192, 191, 191);
+  padding: 3%;
+  color: white;
+  border-radius: 20px;
+  box-shadow: var(--box-shadow);
+  background: linear-gradient(to top left, #0000cc 0%, #990099 100%);
+}
+
+
+.space {
+  justify-content: space-between;
+}
+
+.radio-button {
+
+  border-radius: 5px;
+  padding: 2% 8%;
+  background: linear-gradient(to right, #cc66ff 0%, #cc00cc 100%);
+  color: white;
+}
+
+.radio-button-active {
+
+
+  border-radius: 5px;
+  padding: 2% 8%;
+}
+
+.margin {
+  padding: 1% 7%;
+}
+
+.button2 {
+  padding: 2%;
+  border: none;
+  border-radius: 7px;
+  background: linear-gradient(to right, #0099ff 0%, #7a47ad 100%);
+  color: white;
+}
+
+.button-active {
+  padding: 2%;
+  border: none;
+  border-radius: 7px;
+  background: linear-gradient(to right, #0099ff 0%, #1f1483 100%);
+  color: white;
+}
+
+.button3 {
+  padding: 3%;
+  border: none;
+  border-radius: 10px;
+  background: linear-gradient(to right, #cc66ff 0%, #cc00cc 100%);
+  color: white;
+  text-align: center;
+  margin-left: auto;
+  z-index: 999;
+  margin-right: auto;
+}
+
+.tran {
+  transition: 2s;
+}
+
+.center2 {}
+
+/* --------home style end=----------- */
