@@ -12,7 +12,54 @@
   --text-shadow: 0 1.5rem 3rem rgba(0, 0, 0, .3);
 }
 
+.button-effect {
+  color: white;
+  transition: 0.50s;
+  border-radius: 30px;
 
+}
+
+.button-effect:hover {
+  border-color: #ff6699;
+  color: #ff6699;
+  font-weight: bold;
+}
+
+.button-effect :focus {
+  border-color: #ff6699;
+  color: #ff6699;
+  font-weight: bold;
+}
+
+.button-effect2 {
+  background: #ff6699;
+  border: 2px solid;
+  font: inherit;
+  line-height: 1;
+  margin: 0.5em;
+  padding: 1em 2em;
+}
+
+.fill:hover,
+.fill:focus {
+  box-shadow: inset 0 0 0 2em white;
+}
+
+.white-button {
+  background: white;
+  border: none;
+  padding: 13px;
+  border-radius: 15px;
+  color: #8D3DAF;
+}
+
+.white-button:hover {
+  background: linear-gradient(to right, #ff6699 11%, #0033cc 91%);
+  border: none;
+  padding: 13px;
+  color: white;
+  border-radius: 15px;
+}
 
 /* -----------Navbar style start-------- */
 
@@ -620,6 +667,7 @@ ul {
 .card {
 
   font-size: 25px;
+  font-weight: bold;
   cursor: pointer;
   text-align: center;
   margin-top: auto;
@@ -703,6 +751,7 @@ ul {
 
   transition: all 0.3s ease-out;
   color: #ffffff;
+  font-weight: bold;
 
 }
 
@@ -936,11 +985,6 @@ ul {
   padding: 2%;
 }
 
-.white-button {
-  border: none;
-  padding: 1%;
-  border-radius: 10px;
-}
 
 
 

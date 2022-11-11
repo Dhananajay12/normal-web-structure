@@ -413,12 +413,7 @@ function App() {
               talk to one of our Company Formation Specialists.
             </h5>
             <br></br>
-            <button
-              className="white-button  bold-text"
-              style={{ color: "#8D3DAF" }}
-            >
-              Get in Touch
-            </button>
+            <button className="white-button  bold-text">Get in Touch</button>
           </div>
         </div>
       </div>
@@ -499,6 +494,9 @@ function App() {
       <br></br>
       <br></br>
       <br></br>
+      <br></br>
+
+      <br></br>
 
       <div className="container">
         <div className="row">
@@ -525,7 +523,7 @@ function App() {
               services. Other services that we offer are Brand Protection, Bank
               account opening, PRO Services, Company liquidation and many more.
             </p>
-            <button className="button2">MORE</button>
+            <button className="button2">Know More </button>
           </div>
           <div
             className="col-lg-6 col-md-6"
@@ -538,6 +536,12 @@ function App() {
       </div>
       <br></br>
       <br></br>
+
+      <br></br>
+      <br></br>
+
+      <br></br>
+
       <div
         className="container-fluid"
         data-aos="fade-up"
@@ -651,9 +655,9 @@ function App() {
                       Designer Products Straight Out Of Fashion Houses. You Can
                       Shop Online At RAZEECOM.
                     </p>
-                    <a href="/aboutus" className="button mt-5 ">
-                      Know More
-                    </a>
+                    <button className="button-effect  button-effect2 fill">
+                      Know more
+                    </button>
                   </ul>
                 </div>
 
@@ -818,9 +822,10 @@ function App() {
                     Know More About Lincensing
                   </h3>
                   <br></br>
-                  <a href="/" className="button ">
-                    Know More!{" "}
-                  </a>
+
+                  <button className="button-effect  button-effect2 fill">
+                    Fill In
+                  </button>
                 </div>
               </div>
               <br></br>
